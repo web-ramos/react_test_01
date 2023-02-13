@@ -1,0 +1,28 @@
+.wrapperPopup {
+  @apply
+    fixed
+    top-0
+    left-0
+    w-full
+    h-screen
+    flex
+    justify-center
+    items-center
+    z-[200]
+    bg-white/[0.85]
+}
+
+.containerPopup {
+  @apply
+    m-auto
+    w-[90%]
+    max-h-[90%]
+
+    overflow-y-auto
+    overflow-x-hidden
+    border
+    rounded
+    border-slate-200
+    bg-white
+    shadow-lg
+}
