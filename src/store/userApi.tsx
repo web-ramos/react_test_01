@@ -1,8 +1,9 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { IUser, IPost } from '../constants/types'
+import { IUser, IPost, IAlbum } from '../constants/types'
 
 type UsersResponse = IUser[]
 type PostsResponse = IPost[]
+type AlbumResponse = IAlbum[]
 
 const urlAPI = 'https://jsonplaceholder.typicode.com/'
 
@@ -16,7 +17,7 @@ export const userApi = createApi({
     getPostsByUserId: builder.query<PostsResponse, string>({
       query: (id) => `users/${id}/posts`,
     }),
-    getAlbumsByUserId: builder.query<PostsResponse, string>({
+    getAlbumsByUserId: builder.query<AlbumResponse, string>({
       query: (id) => `users/${id}/albums`,
     }),
   }),
