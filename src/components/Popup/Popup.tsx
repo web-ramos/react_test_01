@@ -1,5 +1,4 @@
 import { FC, ReactNode, useEffect, useRef, useState } from 'react'
-import {ReactComponent as IconClose} from './close.svg'
 import styles from './Popup.module.css'
 
 interface PropsPopup {
@@ -11,10 +10,6 @@ interface PropsPopup {
 export const Popup: FC<PropsPopup> = ({ openElement, children }) => {
 
   const [openPopup, setOpenPopup] = useState<boolean>(false);
-
-  const handleClose = () => {
-    setOpenPopup(false)
-  }
 
   const handleOpen = () => {
     setOpenPopup(true)
